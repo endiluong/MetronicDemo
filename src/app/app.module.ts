@@ -10,8 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { ShellModule } from './shell/shell.module';
-import { LayoutModule } from './modules/content/layout/layout.module';
-import { PartialsModule } from './modules/content/partials/partials.module';
 
 // Components
 import { AppComponent } from './app.component';
@@ -44,8 +42,6 @@ export function hljsLanguages() {
     // Routing
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
 
-    LayoutModule,
-    PartialsModule,
     CoreModule,
     SharedModule,
     ShellModule,
