@@ -12,6 +12,7 @@ import { PartialsModule } from '@app/shared/components/partials/partials.module'
 
 // Components
 import { ActionComponent } from './action.component';
+import { ActionRoutingModule } from './action.routing';
 
 @NgModule({
   imports: [
@@ -21,8 +22,9 @@ import { ActionComponent } from './action.component';
     AngularEditorModule,
 
     PartialsModule,
+    SharedModule,
 
-    SharedModule
+    ActionRoutingModule
   ],
   declarations: [
     ActionComponent

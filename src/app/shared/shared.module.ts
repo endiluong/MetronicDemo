@@ -2,10 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
-// Custom Components
-import { LoaderComponent } from './loader/loader.component';
-
-
 // Custom Directives
 import { MenuAsideDirective } from './directives/menu-aside.directive';
 import { MenuAsideOffcanvasDirective } from './directives/menu-aside-offcanvas.directive';
@@ -19,7 +15,6 @@ import { QuickSearchDirective } from './directives/quick-search.directive';
 import { ClipboardDirective } from './directives/clipboard.directive';
 import { PortletDirective } from './directives/portlet.directive';
 
-
 // Custom Pipes
 import { FirstLetterPipe } from './pipes/first-letter.pipe';
 import { TimeElapsedPipe } from './pipes/time-elapsed.pipe';
@@ -27,7 +22,6 @@ import { JoinPipe } from './pipes/join.pipe';
 import { GetObjectPipe } from './pipes/get-object.pipe';
 import { ConsoleLogPipe } from './pipes/console-log.pipe';
 import { SafePipe } from './pipes/safe.pipe';
-
 
 // Custom Services
 import { AclService } from './services/acl.service';
@@ -51,28 +45,21 @@ import { MenuHorizontalService } from './services/layout/menu-horizontal.service
 import { MenuAsideService } from './services/layout/menu-aside.service';
 import { TranslationService } from './services/translation.service';
 
-
 // Vendors
 import { PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { GestureConfig } from '@angular/material';
 import 'hammerjs';
-
-
+import { environment } from '@env/environment';
+import { FakeApiService } from './services/fake-api/fake-api.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   // suppressScrollX: true
 };
 
-
 @NgModule({
-  imports: [
-    CommonModule,
-
-  ],
+  imports: [CommonModule, environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forRoot(FakeApiService) : []],
   declarations: [
-    // Components
-    LoaderComponent,
-
     // Directives
     MenuAsideDirective,
     MenuAsideOffcanvasDirective,
@@ -95,9 +82,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SafePipe
   ],
   exports: [
-    // Components
-    LoaderComponent,
-
     // Directives
     MenuAsideDirective,
     MenuAsideOffcanvasDirective,
@@ -152,4 +136,4 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     }
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -26,7 +26,7 @@ export class Shell {
 
       // Reuse ShellComponent instance when navigating between child views
       data: {
-        reuse: true,
+        // reuse: true,
         permissions: {
           only: ['ADMIN', 'USER'],
           except: ['GUEST'],

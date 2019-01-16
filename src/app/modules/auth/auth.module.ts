@@ -17,6 +17,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
+// Routing
+import { AuthRoutingModule } from './auth.routing';
+
 
 @NgModule({
   imports: [
@@ -28,12 +31,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatCheckboxModule,
     TranslateModule.forChild(),
     SpinnerButtonModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: AuthComponent
-      }
-    ])
+
+    AuthRoutingModule
   ],
   providers: [],
   declarations: [AuthComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, AuthNoticeComponent]

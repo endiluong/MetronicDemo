@@ -12,6 +12,134 @@ export class MenuConfig implements ConfigModel {
         self: {},
         items: [
           {
+            title: 'Apps',
+            root: true,
+            icon: 'flaticon-paper-plane',
+            toggle: 'click',
+            translate: 'MENU.APPS',
+            badge: {
+              type: 'm-badge--brand m-badge--wide',
+              value: 'new',
+              translate: 'MENU.NEW'
+            },
+            submenu: {
+              type: 'classic',
+              alignment: 'left',
+              items: [
+                {
+                  title: 'eCommerce',
+                  icon: 'flaticon-business',
+                  submenu: {
+                    type: 'classic',
+                    alignment: 'right',
+                    items: [
+                      {
+                        title: 'Customers',
+                        page: '/ecommerce/customers',
+                        icon: 'flaticon-users'
+                      },
+                      {
+                        title: 'Orders',
+                        page: '/ecommerce/orders',
+                        icon: 'flaticon-interface-1'
+                      },
+                      {
+                        title: 'Products',
+                        page: '/ecommerce/products',
+                        icon: 'flaticon-list-1'
+                      }
+                    ]
+                  }
+                },
+                {
+                  title: 'Audience',
+                  tooltip: 'Non functional dummy link',
+                  icon: 'flaticon-computer',
+                  submenu: {
+                    type: 'classic',
+                    alignment: 'right',
+                    items: [
+                      {
+                        title: 'Active Users',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-users'
+                      },
+                      {
+                        title: 'User Explorer',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-interface-1'
+                      },
+                      {
+                        title: 'Users Flows',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-lifebuoy'
+                      },
+                      {
+                        title: 'Market Segments',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-graphic-1'
+                      },
+                      {
+                        title: 'User Reports',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-graphic'
+                      }
+                    ]
+                  }
+                },
+                {
+                  title: 'Marketing',
+                  tooltip: 'Non functional dummy link',
+                  icon: 'flaticon-map'
+                },
+                {
+                  title: 'Campaigns',
+                  tooltip: 'Non functional dummy link',
+                  icon: 'flaticon-graphic-2',
+                  badge: {
+                    type: 'm-badge--success',
+                    value: '3'
+                  }
+                },
+                {
+                  title: 'Cloud Manager',
+                  tooltip: 'Non functional dummy link',
+                  icon: 'flaticon-infinity',
+                  submenu: {
+                    type: 'classic',
+                    alignment: 'left',
+                    items: [
+                      {
+                        title: 'File Upload',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-add',
+                        badge: {
+                          type: 'm-badge--danger',
+                          value: '3'
+                        }
+                      },
+                      {
+                        title: 'File Attributes',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-signs-1'
+                      },
+                      {
+                        title: 'Folders',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-folder'
+                      },
+                      {
+                        title: 'System Settings',
+                        tooltip: 'Non functional dummy link',
+                        icon: 'flaticon-cogwheel-2'
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
             title: 'Actions',
             root: true,
             icon: 'flaticon-add',
@@ -23,7 +151,7 @@ export class MenuConfig implements ConfigModel {
               items: [
                 {
                   title: 'Create New Post',
-                  tooltip: 'Non functional dummy link',
+                  page: '/header/actions',
                   icon: 'flaticon-file',
                   translate: 'MENU.CREATE_POST',
                   aside: {
@@ -43,7 +171,7 @@ export class MenuConfig implements ConfigModel {
                         submenu: [
                           {
                             title: 'Create New Post',
-                            tooltip: 'Non functional dummy link'
+                            page: '/header/actions'
                           },
                           {
                             title: 'Timesheet',
@@ -320,134 +448,6 @@ export class MenuConfig implements ConfigModel {
                 }
               ]
             }
-          },
-          {
-            title: 'Apps',
-            root: true,
-            icon: 'flaticon-paper-plane',
-            toggle: 'click',
-            translate: 'MENU.APPS',
-            badge: {
-              type: 'm-badge--brand m-badge--wide',
-              value: 'new',
-              translate: 'MENU.NEW'
-            },
-            submenu: {
-              type: 'classic',
-              alignment: 'left',
-              items: [
-                {
-                  title: 'eCommerce',
-                  icon: 'flaticon-business',
-                  submenu: {
-                    type: 'classic',
-                    alignment: 'right',
-                    items: [
-                      {
-                        title: 'Customers',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-users'
-                      },
-                      {
-                        title: 'Orders',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-interface-1'
-                      },
-                      {
-                        title: 'Products',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-list-1'
-                      }
-                    ]
-                  }
-                },
-                {
-                  title: 'Audience',
-                  tooltip: 'Non functional dummy link',
-                  icon: 'flaticon-computer',
-                  submenu: {
-                    type: 'classic',
-                    alignment: 'right',
-                    items: [
-                      {
-                        title: 'Active Users',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-users'
-                      },
-                      {
-                        title: 'User Explorer',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-interface-1'
-                      },
-                      {
-                        title: 'Users Flows',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-lifebuoy'
-                      },
-                      {
-                        title: 'Market Segments',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-graphic-1'
-                      },
-                      {
-                        title: 'User Reports',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-graphic'
-                      }
-                    ]
-                  }
-                },
-                {
-                  title: 'Marketing',
-                  tooltip: 'Non functional dummy link',
-                  icon: 'flaticon-map'
-                },
-                {
-                  title: 'Campaigns',
-                  tooltip: 'Non functional dummy link',
-                  icon: 'flaticon-graphic-2',
-                  badge: {
-                    type: 'm-badge--success',
-                    value: '3'
-                  }
-                },
-                {
-                  title: 'Cloud Manager',
-                  tooltip: 'Non functional dummy link',
-                  icon: 'flaticon-infinity',
-                  submenu: {
-                    type: 'classic',
-                    alignment: 'left',
-                    items: [
-                      {
-                        title: 'File Upload',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-add',
-                        badge: {
-                          type: 'm-badge--danger',
-                          value: '3'
-                        }
-                      },
-                      {
-                        title: 'File Attributes',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-signs-1'
-                      },
-                      {
-                        title: 'Folders',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-folder'
-                      },
-                      {
-                        title: 'System Settings',
-                        tooltip: 'Non functional dummy link',
-                        icon: 'flaticon-cogwheel-2'
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
           }
         ]
       },
@@ -462,6 +462,86 @@ export class MenuConfig implements ConfigModel {
             page: '/',
             badge: { type: 'm-badge--danger', value: '2' },
             translate: 'MENU.DASHBOARD'
+          },
+          { section: 'Applications' },
+          {
+            title: 'eCommerce',
+            bullet: 'dot',
+            icon: 'flaticon-business',
+            root: true,
+            submenu: [
+              {
+                title: 'Customers',
+                page: '/ecommerce/customers'
+              },
+              {
+                title: 'Orders',
+                page: '/ecommerce/orders'
+              },
+              {
+                title: 'Products',
+                page: '/ecommerce/products'
+              }
+            ]
+          },
+          {
+            title: 'User Management',
+            root: true,
+            bullet: 'dot',
+            icon: 'flaticon-user',
+            page: '/user-management'
+          },
+          {
+            title: 'Audit Log',
+            root: true,
+            bullet: 'dot',
+            icon: 'flaticon-interface-5',
+            page: '/audit-log'
+          },
+          { section: 'Pages' },
+          {
+            title: 'User',
+            root: true,
+            bullet: 'dot',
+            icon: 'flaticon-interface-1',
+            submenu: [
+              {
+                title: 'Profile',
+                page: '/profile'
+              }
+            ]
+          },
+          {
+            title: 'Error',
+            root: true,
+            bullet: 'dot',
+            icon: 'flaticon-interface-2',
+            submenu: [
+              {
+                title: 'Error-1',
+                page: '/error/1'
+              },
+              {
+                title: 'Error-2',
+                page: '/error/2'
+              },
+              {
+                title: 'Error-3',
+                page: '/error/3'
+              },
+              {
+                title: 'Error-4',
+                page: '/error/4'
+              },
+              {
+                title: 'Error-5',
+                page: '/error/5'
+              },
+              {
+                title: 'Error-6',
+                page: '/error/6'
+              }
+            ]
           },
           { section: 'Tools' },
           {

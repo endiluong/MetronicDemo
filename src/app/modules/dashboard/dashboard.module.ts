@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Sub Modules
-import { LayoutModule } from '@app/shell/layout/layout.module';
 import { PartialsModule } from '@app/shared/components/partials/partials.module';
 import { ListTimelineModule, WidgetChartsModule } from '@app/shared/components/partials';
 
@@ -20,7 +19,6 @@ import { DashboardRoutingModule } from './dashboard.routing';
     RouterModule,
     ListTimelineModule,
 
-    LayoutModule,
     WidgetChartsModule,
     PartialsModule,
 

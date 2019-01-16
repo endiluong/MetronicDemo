@@ -22,6 +22,18 @@ const routes: Routes = [
       loadChildren: 'app/modules/dashboard/dashboard.module#DashboardModule'
     },
     {
+      path: 'ecommerce',
+      loadChildren: 'app/modules/apps/e-commerce/e-commerce.module#ECommerceModule'
+    },
+    {
+      path: 'user-management',
+      loadChildren: 'app/modules/user-management/user-management.module#UserManagementModule'
+    },
+    {
+      path: 'audit-log',
+      loadChildren: 'app/modules/apps/audit-log/audit-log.module#AuditLogModule'
+    },
+    {
       path: 'builder',
       loadChildren: 'app/modules/builder/builder.module#BuilderModule'
     },
@@ -57,7 +69,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: []
 })

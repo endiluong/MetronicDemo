@@ -1,5 +1,4 @@
 export * from './shared.module';
-export * from './loader/loader.component';
 
 // Custom Directives
 export { MenuAsideDirective } from './directives/menu-aside.directive';

@@ -15,7 +15,7 @@ import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 
 // Routing
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing';
 
 // Vendors
 import { NgxPermissionsModule } from 'ngx-permissions';
@@ -24,6 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material';
 
 import { HighlightModule } from 'ngx-highlightjs';
 import typescript from 'highlight.js/lib/languages/typescript';
+import { environment } from '@env/environment';
 
 export function hljsLanguages() {
   return [

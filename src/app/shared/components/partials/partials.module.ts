@@ -21,7 +21,6 @@ import {
 
 
 // Sub Modules
-import { SharedModule } from '@app/shared';
 import { MessengerModule } from './layout/quick-sidebar/messenger/messenger.module';
 import { ListTimelineModule } from './layout/quick-sidebar/list-timeline/list-timeline.module';
 import { PortletModule } from './content/general/portlet/portlet.module';
@@ -114,7 +113,6 @@ import { RecentNotificationsComponent } from './content/widgets/general/recent-n
     MatTooltipModule,
     WidgetChartsModule,
 
-    SharedModule
   ]
 })
 export class PartialsModule {}

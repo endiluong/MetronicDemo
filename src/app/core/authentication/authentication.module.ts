@@ -11,7 +11,6 @@ export function factory(authenticationService: AuthenticationService) {
 }
 
 @NgModule({
-  imports: [AuthModule],
   providers: [
     TokenStorage,
     AuthenticationService,

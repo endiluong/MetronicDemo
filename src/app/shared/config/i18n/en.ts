@@ -11,7 +11,9 @@ export const locale = {
       CREATE_POST: 'Create New Post',
       REPORTS: 'Reports',
       APPS: 'Apps',
-      DASHBOARD: 'Dashboard'
+      DASHBOARD: 'Dashboard',
+      VIEWALLITEM: 'View All Item',
+      IMPORTITEM: 'Import Item'
     },
     AUTH: {
       GENERAL: {

@@ -7,13 +7,11 @@ import env from './.env';
 
 export const environment = {
   production: false,
+  isMockEnabled: true,
   version: env.npm_package_version + '-dev',
   serverUrl: '/api',
-  defaultLanguage: 'en-US',
-  supportedLanguages: [
-    'en-US',
-    'fr-FR'
-  ]
+  defaultLanguage: 'Tiếng Việt',
+  supportedLanguages: ['English', 'Tiếng Việt']
 };
 
 /*

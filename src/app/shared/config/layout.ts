@@ -109,11 +109,13 @@ export class LayoutConfig implements ConfigModel {
         desktop_and_mobile: {
           // Left aside menu submenu settings
           submenu: {
+            // tslint:disable-next-line:max-line-length
             skin: 'inherit', // Select left aside menu skin from available options: light|dark|inherit(from aside left skin)
 
             accordion: true, // Set accordion submenu toggle mode(set to fasle to enable submenu dropdown mode)
 
             dropdown: {
+              // tslint:disable-next-line:max-line-length
               // Set submenu dropdown mode(for minimized left aside mode and or submenu dropdown mode activated when accordion: false set)
               arrow: true, // Display arrows for dropdown submenu
               hover_timeout: 500 // Timeout to auto hide the opened submenu dropdown
@@ -121,6 +123,7 @@ export class LayoutConfig implements ConfigModel {
           },
           // Minimized left aside menu
           minimize: {
+            // tslint:disable-next-line:max-line-length
             submenu_type: 'default' // Select submenu type for minimized left aside mode from available options: default/compact
           }
         }

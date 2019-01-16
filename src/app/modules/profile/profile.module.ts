@@ -13,6 +13,9 @@ import { PartialsModule } from '@app/shared/components/partials/partials.module'
 // Components
 import { ProfileComponent } from './profile.component';
 
+// Routing
+import { ProfileRoutingModule } from './profile.routing';
+
 
 @NgModule({
   imports: [
@@ -22,8 +25,9 @@ import { ProfileComponent } from './profile.component';
     AngularEditorModule,
 
     PartialsModule,
+    SharedModule,
 
-    SharedModule
+    ProfileRoutingModule
   ],
   declarations: [ProfileComponent]
 })
